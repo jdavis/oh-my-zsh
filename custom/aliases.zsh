@@ -9,8 +9,6 @@ alias -g L=' | less'
 alias -g T=' | tail -20'
 alias -g NULL=' > /dev/null 2>&1'
 
-
-
 # I like to be safe...
 alias rm='rm -i'
 
@@ -39,6 +37,7 @@ alias grp='git rev-parse'
 alias grv='git revert'
 alias gs='git status'
 alias gst='git stash'
+alias gsl='git shortlog'
 
 #  Add the Scripts directory for all users
 export PATH=$PATH:~/Scripts
