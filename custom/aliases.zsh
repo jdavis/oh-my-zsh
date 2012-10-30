@@ -58,8 +58,8 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 	# It makes adding and removing a lot easier
 	#
 
-    # Prefix /usr/local/git/bin for git
-    export PATH=/usr/local/git/bin:$PATH
+    # Prefix /usr/local/bin for brew
+    export PATH=/usr/local/bin:$PATH
 
 	# Normal Bin
 	export PATH=$PATH:~/bin
