@@ -7,7 +7,7 @@ alias back='cd -'
 # ZSH Global Aliases
 alias -g L=' | less'
 alias -g T=' | tail -20'
-alias -g NULL=' > /dev/null 2>&1'
+alias -g NUL=' > /dev/null 2>&1'
 
 # I like to be safe...
 alias rm='rm -i'
