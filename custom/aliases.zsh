@@ -16,6 +16,7 @@ alias rm='rm -i'
 # Based off of Peteris: http://www.catonmat.net/blog/git-aliases/
 # But customized for ME!
 alias g='git'
+alias gP='git push'
 alias ga='git add'
 alias gb='git branch'
 alias gc='git commit'
@@ -27,17 +28,18 @@ alias gf='git fetch'
 alias gh='git help'
 alias gl='git log'
 alias gp='git pull'
-alias gP='git push'
 alias gr='git remote'
 alias grb='git rebase'
 alias grf='git reflog'
 alias grl='git rev-list'
 alias grm='git rm'
 alias grp='git rev-parse'
+alias grs='git reset'
 alias grv='git revert'
 alias gs='git status'
-alias gst='git stash'
 alias gsl='git shortlog'
+alias gst='git stash'
+alias gun='git reset HEAD'
 
 #  Add the Scripts directory for all users
 export PATH=$PATH:~/Scripts
