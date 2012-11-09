@@ -12,34 +12,8 @@ alias -g NUL=' > /dev/null 2>&1'
 # I like to be safe...
 alias rm='rm -i'
 
-# Some Git alias
-# Based off of Peteris: http://www.catonmat.net/blog/git-aliases/
-# But customized for ME!
+# Alias Git, moved all other aliases to ~/.gitconfig
 alias g='git'
-alias gP='git push'
-alias ga='git add'
-alias gb='git branch'
-alias gc='git commit'
-alias gch='git checkout'
-alias gcl='git clone'
-alias gd='git diff'
-alias gdc='git diff --cached'
-alias gf='git fetch'
-alias gh='git help'
-alias gl='git log'
-alias gp='git pull'
-alias gr='git remote'
-alias grb='git rebase'
-alias grf='git reflog'
-alias grl='git rev-list'
-alias grm='git rm'
-alias grp='git rev-parse'
-alias grs='git reset'
-alias grv='git revert'
-alias gs='git status'
-alias gsl='git shortlog'
-alias gst='git stash'
-alias gun='git reset HEAD'
 
 #  Add the Scripts directory for all users
 export PATH=$PATH:~/Scripts
