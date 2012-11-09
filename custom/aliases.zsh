@@ -12,8 +12,11 @@ alias -g NUL=' > /dev/null 2>&1'
 # I like to be safe...
 alias rm='rm -i'
 
-# Alias Git, moved all other aliases to ~/.gitconfig
+# Alias Git, moved most other aliases to ~/.gitconfig
+# For some reason, Git doesn't like capitalized aliases. Some must remain.
 alias g='git'
+alias gp='git pull'
+alias gP='git push'
 
 #  Add the Scripts directory for all users
 export PATH=$PATH:~/Scripts
