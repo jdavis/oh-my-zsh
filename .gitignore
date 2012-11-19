@@ -2,5 +2,6 @@ locals.zsh
 log/.zsh_history
 projects.zsh
 *.swp
-custom/secret.zsh
 cache/
+custom/creds.zsh
+custom/secret
