@@ -1,3 +1,7 @@
+#
+# Aliases for all Computers
+#
+
 # Builtin aliases
 alias ll='ls -l'
 alias la='ls -a'
@@ -18,8 +22,9 @@ alias g='git'
 alias gp='git pull'
 alias gP='git push'
 
-#  Add the Scripts directory for all users
-export PATH=$PATH:~/Scripts
+#
+# OS Specific Aliases
+#
 
 # OS X Aliases
 if [[ $CURRENT_OS == 'OS X' ]]; then
@@ -41,43 +46,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 
 	# Open from command line
 	alias finder='open -a Finder '
-
-	#
-	# Path Additions
-	# It makes adding and removing a lot easier
-	#
-
-    # Prefix /usr/local/bin for brew
-    export PATH=/usr/local/bin:$PATH
-
-	# Normal Bin
-	export PATH=$PATH:~/bin
-	# MIT-Scheme
-	export MITSCHEME_LIBRARY_PATH=/usr/local/lib/mit-scheme-c/
-	# For Scheme
-	export PATH=$PATH:~/bin/scheme/bin
-	# Nmap
-	export PATH=$PATH:/Users/Davis/.nmap
-	# Lua
-	export PATH=$PATH:~/bin/lua
-	# Prolog
-	export PATH=$PATH:~/bin/prolog/bin
-	# Erlang
-	export PATH=$PATH:~/bin/erlang/bin
-	# JavaScript Lint
-	export PATH=$PATH:~/bin/jsl
-	#  Django
-	export PATH=$PATH:/Library/Python/2.5/site-packages/django/bin
-	#  MacPorts
-	export PATH=$PATH:/opt/local/bin
-	#  Add the Scripts/Mac directory
-	export PATH=$PATH:~/Scripts/Mac
-    # Add all npm packages
-    export PATH=$PATH:/usr/local/share/npm/bin
-fi
-
-# Arch Aliases
-if [[ $CURRENT_OS == 'Linux' ]]; then
+elif [[ $CURRENT_OS == 'Linux' ]]; then
 	alias ls='ls --color=auto'
 
 	# Monitors
@@ -111,7 +80,6 @@ if [[ $CURRENT_OS == 'Linux' ]]; then
 	# Source Extensions
 	alias -s hs=$EDITOR
 	alias -s c=$EDITOR
-
-	#  Add the Scripts/Arch directory
-	export PATH=$PATH:~/Scripts/Arch
+elif [[ $CURRENT_OS == 'Cygwin' ]]; then
+    alias py='/cygdrive/c/Python27/python'
 fi
