@@ -40,6 +40,7 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 	#  Add the Scripts/Arch directory
 	export PATH=$PATH:~/Scripts/Arch
+    export PATH=$PATH:~/Scripts/appengine
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     #
 fi
