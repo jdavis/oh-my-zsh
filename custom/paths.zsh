@@ -41,6 +41,7 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
 	#  Add the Scripts/Arch directory
 	export PATH=$PATH:~/Scripts/Arch
     export PATH=$PATH:~/Scripts/appengine
+    export PATH=$PATH:~/.cabal/bin
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     #
 fi
