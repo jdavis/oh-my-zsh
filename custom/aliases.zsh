@@ -47,22 +47,12 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 	# Open from command line
 	alias finder='open -a Finder '
 elif [[ $CURRENT_OS == 'Linux' ]]; then
+    #
+    # Global Linux
+    #
+
+    # Misc Aliases
 	alias ls='ls --color=auto'
-
-	# Monitors
-	# Moved to a separate script in ~/Scripts
-	# alias vga='xrandr --output CRT1 --same-as LCD --auto'
-	# alias dual-monitors='xrandr --output CRT1 --right-of LCD --mode 1660x1050'
-
-	# Various Eclim
-	alias eclim='$ECLIM_ECLIPSE_HOME/eclipse'
-	alias eclimd=~/.eclipse/org.eclipse.platform_3.5.0_1543616141/configuration/eclipse/eclimd
-
-	# Music Collection
-	alias music-update='chmod -R a+X /home/davis/Music/Artists'
-
-	# Hahah, that's what it looks like to me
-	alias yogurt='yaourt'
 
 	# Extensions
 	alias -s avi=vlc
@@ -80,6 +70,25 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
 	# Source Extensions
 	alias -s hs=$EDITOR
 	alias -s c=$EDITOR
+
+    #
+    # User Specific Aliases
+    #
+
+    if [[ $USER == 'davis' ]]; then
+        # Monitors
+        # Moved to a separate script in ~/Scripts
+        # alias vga='xrandr --output CRT1 --same-as LCD --auto'
+        # alias dual-monitors='xrandr --output CRT1 --right-of LCD --mode 1660x1050'
+
+        # Music Collection
+        alias music-update='chmod -R a+X /home/davis/Music/Artists'
+
+        # Hahah, that's what it looks like to me
+        alias yogurt='yaourt'
+    elif [[ $USER == 'davisjos' ]]; then
+        alias eclimd=$ECLIPSE_HOME/eclimd
+    fi
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     alias py='/cygdrive/c/Python27/python'
 fi
