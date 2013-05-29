@@ -43,6 +43,21 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     export PATH=$PATH:~/Scripts/appengine
     export PATH=$PATH:~/.cabal/bin
     export PATH=$PATH:~/bin/
+
+    #
+    # User Specific Aliases
+    #
+
+    if [[ $USER == 'davis' ]]; then
+        # Home Linux
+    elif [[ $USER == 'davisjos' ]]; then
+        # Work Linux
+
+        # Android SDK Tools
+        export PATH=$PATH:~/Programming/SDKs/tools
+        # Android SDK Platform Tools
+        export PATH=$PATH:~/Programming/SDKs/platform-tools
+    fi
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     #
 fi
