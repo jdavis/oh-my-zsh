@@ -87,6 +87,7 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
         # Hahah, that's what it looks like to me
         alias yogurt='yaourt'
     elif [[ $USER == 'davisjos' ]]; then
+        export ECLIPSE_HOME=/opt/eclipse/
         alias eclimd=$ECLIPSE_HOME/eclimd
     fi
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
