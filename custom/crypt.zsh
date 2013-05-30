@@ -13,8 +13,8 @@ function load-crypt() {
         echo "To select a cipher, set \$CRYPT_CIPHER"
         return 1
     fi
-    
-    
+
+
     hash gpg 2> /dev/null || {
         echo "Oh dear, I require gpg to work. Consider installing it."
         return 1
