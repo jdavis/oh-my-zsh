@@ -7,11 +7,10 @@ function matrix() {
 }
 
 function virtualenv_prompt_info(){
-  local virtualenv_path="$VIRTUAL_ENV"
-  if [[ -n $virtualenv_path ]]; then
-    local virtualenv_name=`basename $virtualenv_path`
-    printf "%s[%s] " "%{${fg[yellow]}%}" $virtualenv_name
+  if [[ -n $VIRTUAL_ENV ]]; then
+    printf "%s[%s] " "%{${fg[yellow]}%}" ${${VIRTUAL_ENV}:t}
   fi
 }
 
+# disables prompt mangling in virtual_env/bin/activate
 export VIRTUAL_ENV_DISABLE_PROMPT=1
