@@ -89,6 +89,7 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     elif [[ $USER == 'davisjos' ]]; then
         export ECLIPSE_HOME=/opt/eclipse/
         alias eclimd=$ECLIPSE_HOME/eclimd
+        alias eclimd-rhel='$ECLIPSE_HOME/eclimd -Dosgi.instance.area.default=@user.home/Programming/RHEL/workspace'
     fi
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     alias py='/cygdrive/c/Python27/python'
