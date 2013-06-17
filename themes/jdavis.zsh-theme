@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 PROMPT='%{$fg[cyan]%}[%{$fg[white]%} %n %{$fg[cyan]%}] [%{$fg[white]%}%~%{$fg[cyan]%}] >%{$reset_color%} '
 RPROMPT='%{$fg[cyan]%}[%{$fg[white]%}$(git_prompt_info)%{$fg[cyan]%}]%{$reset_color%}'
 
