@@ -57,6 +57,8 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
         export PATH=$PATH:~/Programming/SDKs/tools
         # Android SDK Platform Tools
         export PATH=$PATH:~/Programming/SDKs/platform-tools
+        # Jars
+        export PATH=$PATH:~/jars
     fi
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
     #
