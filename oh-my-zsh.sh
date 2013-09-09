@@ -58,6 +58,13 @@ for config_file ($ZSH_CUSTOM/*.zsh(N)); do
 done
 unset config_file
 
+# Load all my secret files
+if [[ -d "$ZSH_CUSTOM/secret/" ]] ; then
+    for secret_file ($ZSH_CUSTOM/secret/*.zsh(N)); do
+      source $secret_file
+    done
+fi
+
 # Load the theme
 if [ "$ZSH_THEME" = "random" ]
 then
