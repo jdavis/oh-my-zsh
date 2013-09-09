@@ -8,8 +8,7 @@ hash xmodmap 2> /dev/null || {
     return
 }
 
-
-# Load Vim xmodmap
+# Load Vim xmodmap, only if xhost succeeds
 if [ -s ~/.xmodmap-vim ]; then
-    xmodmap ~/.xmodmap-vim
+    xhost 2> /dev/null && xmodmap ~/.xmodmap-vim
 fi
