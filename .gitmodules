@@ -1,0 +1,3 @@
+[submodule "custom/secret"]
+	path = custom/secret
+	url = git@github.com:jdavis/secret.git

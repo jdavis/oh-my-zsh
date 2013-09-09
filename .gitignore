@@ -4,5 +4,4 @@ projects.zsh
 *.swp
 cache/
 custom/creds.zsh
-custom/secret
 custom/amazon.zsh
