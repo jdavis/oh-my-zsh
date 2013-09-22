@@ -4,11 +4,11 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 fi
 
 # Check to make sure xmodmap exists
-hash xmodmap 2> /dev/null || {
+hash xmodmap >> /dev/null 2>&1 || {
     return
 }
 
 # Load Vim xmodmap, only if xhost succeeds
 if [ -s ~/.xmodmap-vim ]; then
-    xhost 2> /dev/null && xmodmap ~/.xmodmap-vim
+    xhost >> /dev/null 2>&1 && xmodmap ~/.xmodmap-vim
 fi
