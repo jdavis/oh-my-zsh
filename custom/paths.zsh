@@ -37,6 +37,9 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 	export PATH=$PATH:~/Scripts/Mac
     # Add all npm packages
     export PATH=$PATH:/usr/local/share/npm/bin
+
+    # Add Java jars (like checkstyle, etc)
+    export PATH=$PATH:~/jars
 elif [[ $CURRENT_OS == 'Linux' ]]; then
 	#  Add the Scripts/Arch directory
 	export PATH=$PATH:~/Scripts/Arch
