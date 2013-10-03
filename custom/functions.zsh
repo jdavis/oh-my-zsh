@@ -2,40 +2,6 @@
 # Functions
 #
 
-# Check for updates to the GitHub dotfiles repo
-function update-dotfiles() {
-    builtin cd ~/
-    echo Checking for existing Git repository...
-    if [[ -d "./.git" ]] ; then
-        echo Git repository found, pulling...
-        git pull
-
-        while true; do
-            echo -n "Do you wish to update .zsh_secret?: "
-            read yn
-            case $yn in
-                [Yy]* )
-                    update-secret
-                    break;;
-                [Nn]* ) break;;
-                * ) echo "Please answer yes or no.";;
-            esac
-        done
-
-    else
-        echo No repository found. Cloning from Github...
-        # Clone with the PID as a sort of unique identifier.
-        # Not completely safe proof but the odds are small
-        git clone git@github.com:jdavis/dotfiles.git dotfiles$$
-        echo Copying files...
-        cp -a dotfiles$$/ .
-        echo Deleting files...
-        rm -rf dotfiles$$/
-
-        update-secret
-    fi
-}
-
 # Display Content of cd folder
 function cd() {
     builtin cd $* && ls;
