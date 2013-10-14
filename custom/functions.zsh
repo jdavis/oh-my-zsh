@@ -17,6 +17,28 @@ function futurama() {
     curl -Is slashdot.org | egrep ^X-(F|B) | cut -d - -f 2
 }
 
+# Run a command or multiple commands without saving it in the $HISTFILE
+function incognito() {
+    if [ -z $EDITOR ]; then
+        EDITOR=vim
+    fi
+
+    # Create temp for storing commands
+    TEMPFILE=`mktemp -q incognito.XXXXXXXX`
+
+    # Prompt for commands, only run if successful
+    $EDITOR $TEMPFILE || {
+        echo "Invalid return on the editing"
+        return
+    }
+
+    # Run the script
+    sh $TEMPFILE
+
+    # Clean everything up
+    rm -f $TEMPFILE
+}
+
 # uncompress depending on extension...
 function extract() {
     if [ -f $1 ] ; then
