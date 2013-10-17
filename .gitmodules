@@ -1,3 +1,6 @@
 [submodule "custom/secret"]
 	path = custom/secret
 	url = git@github.com:jdavis/secret.git
+[submodule "custom/zsh-fuzzy-match"]
+	path = custom/zsh-fuzzy-match
+	url = https://github.com/tarruda/zsh-fuzzy-match.git
