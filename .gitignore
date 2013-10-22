@@ -5,5 +5,4 @@ custom/example
 custom/example.zsh
 *.swp
 cache/
-custom/creds.zsh
 custom/amazon.zsh
