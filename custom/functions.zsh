@@ -17,6 +17,11 @@ function futurama() {
     curl -Is slashdot.org | egrep ^X-(F|B) | cut -d - -f 2
 }
 
+# Time ZSH startup
+function zsh-time() {
+    time zsh -i -c exit
+}
+
 # Run a command or multiple commands without saving it in the $HISTFILE
 function incognito() {
     if [ -z $EDITOR ]; then
