@@ -1,6 +1,5 @@
 # Check for updates on initial load...
-if [ "$DISABLE_AUTO_UPDATE" != "true" ]
-then
+if [ "$DISABLE_AUTO_UPDATE" != "true" ]; then
   /usr/bin/env ZSH=$ZSH DISABLE_UPDATE_PROMPT=$DISABLE_UPDATE_PROMPT zsh $ZSH/tools/check_for_upgrade.sh
 fi
 
@@ -76,8 +75,7 @@ if [[ -d "$ZSH_CUSTOM/secret/" ]] ; then
 fi
 
 # Load the theme
-if [ "$ZSH_THEME" = "random" ]
-then
+if [ "$ZSH_THEME" = "random" ]; then
   themes=($ZSH/themes/*zsh-theme)
   N=${#themes[@]}
   ((N=(RANDOM%N)+1))
@@ -85,13 +83,10 @@ then
   source "$RANDOM_THEME"
   echo "[oh-my-zsh] Random theme '$RANDOM_THEME' loaded..."
 else
-  if [ ! "$ZSH_THEME" = ""  ]
-  then
-    if [ -f "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme" ]
-    then
+  if [ ! "$ZSH_THEME" = ""  ]; then
+    if [ -f "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme" ]; then
       source "$ZSH_CUSTOM/$ZSH_THEME.zsh-theme"
-    elif [ -f "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme" ]
-    then
+    elif [ -f "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme" ]; then
       source "$ZSH_CUSTOM/themes/$ZSH_THEME.zsh-theme"
     else
       source "$ZSH/themes/$ZSH_THEME.zsh-theme"
