@@ -31,6 +31,8 @@ function t() {
             args+='-t';;
         d)
             args+=detach-session;;
+        n)
+            args+=new-session;;
         *)
             args+=${a};;
     esac
