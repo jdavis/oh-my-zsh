@@ -2,7 +2,13 @@
 # A function to mimic custom aliases for Tmux. I get tired of having to
 # remember Tmux's arbitrary aliases.
 #
-# To add an alias, just add a line to the case statement in the t() function.
+# To add an alias, just add a line to the $cmds array below. The format is as
+# follows:
+#   [n num of args]:[alias]
+#       arg1
+#       arg2
+#       ...
+#       argn
 # From then on, you can run `t a dev` which will turn into something like `tmux
 # attach-session -t dev` which saves a lot of typing.
 #
