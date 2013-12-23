@@ -11,55 +11,95 @@
 #    Site: http://joshldavis.com
 #
 
+# Default command is to make a new session
+default=n
+
+# Commands to alias
+cmds=(
+    2:a
+        attach-session
+        -t
+    1:d
+        detach-client
+    :n
+        new-session
+)
 
 function t() {
     # Set our default values
     args=()
 
-    if [[ "$1" == 'h' ]] || [[ "$1" == 'help' ]] || [[ "$1" == 'man' ]] ; then
-        help=1
-        a=$2
+    # Set first argument to default if it doesn't exist
+    first=${1:-$default}
+
+    # If first is a help command
+    if [[ $first =~ "^(man|(\-|\-\-)?h(elp)?)$" ]] ; then
+
+        # Print out aliases and quit if only 1 arg
+        if [[ $# == 1 ]] ; then
+            echo "Tmux aliases:"
+            for (( i = 1; i <= ${#cmds[@]}; i = i + 1 )) ; do
+                cmd=${cmds[i]}
+
+                if [[ $cmd =~ "([0-9]+)?\:*" ]] ; then
+                    # Pull out the length, default to 1
+                    len=${${cmd%\:*}:-1}
+
+                    # Pull out the command alias
+                    alia=${cmd##*([0-9:])}
+
+                    # Output alias info
+                    echo "   ${alia}\ttmux ${cmds[@]:$i:$len} ..."
+                    echo
+
+                    # Increment i, since we don't have to worry about the rest
+                    i=$(( i + len ))
+                fi
+            done
+
+            return
+        else
+            # In help, arg is next command
+            help=1
+            arg=$2
+        fi
     else
         help=0
-        a=$1
+        arg=$first
     fi
 
-    # Evaluate our aliases
-    case ${a} in
-        a)
-            args+=attach-session
-            args+='-t';;
-        d)
-            args+=detach-session;;
-        n)
-            args+=new-session;;
-        *)
-            args+=${a};;
-    esac
+    found=0
+    for (( i = 1; i <= ${#cmds[@]}; i = i + 1 )) ; do
+        cmd=${cmds[i]}
+
+        # Only if we match the format of an arg
+        if [[ $cmd =~ "([0-9]+)?\:${arg}" ]] ; then
+            # Pull out the length, again
+            len=${${cmd%\:*}:-1}
+
+            # Add args from $i to $len
+            args+=${cmds[@]:$i:$len}
+            found=1
+            break
+        fi
+    done
+
+    if [[ $found != 1 ]] ; then
+        args+=${arg}
+    fi
 
     # Check if help is being ran
     if [[ "$help" == 1 ]] ; then
 
         # Either print that there is no alias for that
         # or print the alias
-        if [[ "$a" == "$args" ]] ; then
-            echo "No tmux alias for '${a}'"
+        if [[ "$arg" == "$args" ]] ; then
+            echo "No tmux alias for '${arg}'"
         else
-            echo "Tmux argument '${a}' aliased to 'tmux ${args}'"
+            echo "Tmux argument '${arg}' aliased to 'tmux ${args}'"
         fi
         return
     fi
-
-    first=0
-    for arg in "$@" ; do
-        # Skip the first argument, the alias
-        if [[ "$first" == 0 ]] ; then
-            first=1
-        else
-            args+=${arg}
-        fi
-
-    done
 
     # Run tmux on our newly generated commands
     tmux ${args}
