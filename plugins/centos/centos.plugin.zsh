@@ -1,5 +1,8 @@
-# Helper Function for chkconfig
+#
+# Various Functions for CentOS usage
+#
 
+# Add/Remove a service to the startup
 startup() {
     if [ $# -lt 2 ]; then
         echo "Usage: startup {on|off} <service>"
