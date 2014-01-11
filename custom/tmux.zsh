@@ -85,6 +85,7 @@ function t() {
 
             # Add args from $i to $len
             args+=${cmds[@]:$i:$len}
+
             found=1
             break
         fi
@@ -93,6 +94,9 @@ function t() {
     if [[ $found != 1 ]] ; then
         args+=${arg}
     fi
+
+    # Add args rest of args
+    args+=${@[@]:2:$#}
 
     # Check if help is being ran
     if [[ "$help" == 1 ]] ; then
@@ -108,5 +112,5 @@ function t() {
     fi
 
     # Run tmux on our newly generated commands
-    tmux ${args}
+    eval tmux ${args}
 }
