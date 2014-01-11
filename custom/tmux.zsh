@@ -25,6 +25,9 @@ cmds=(
     2:a
         attach-session
         -t
+    2:c
+        new-session
+        -s
     1:d
         detach-client
     :n
