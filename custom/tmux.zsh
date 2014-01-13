@@ -58,7 +58,7 @@ function t() {
                     alia=${cmd##*([0-9:])}
 
                     # Output alias info
-                    echo "   ${alia}\ttmux ${cmds[@]:$i:$len} ..."
+                    echo "   ${alia}\ttmux ${cmds[$i,$len]} ..."
                     echo
 
                     # Increment i, since we don't have to worry about the rest
@@ -87,7 +87,7 @@ function t() {
             len=${${cmd%\:*}:-1}
 
             # Add args from $i to $len
-            args+=${cmds[@]:$i:$len}
+            args+=${cmds[$i,$len]}
 
             found=1
             break
