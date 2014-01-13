@@ -99,7 +99,7 @@ function t() {
     fi
 
     # Add args rest of args
-    args+=${@[@]:2:$#}
+    args+=${@[2,$#]}
 
     # Check if help is being ran
     if [[ "$help" == 1 ]] ; then
