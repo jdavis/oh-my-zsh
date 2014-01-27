@@ -22,6 +22,9 @@ alias g='git'
 alias gp='git pull'
 alias gP='git push'
 
+# Racket: load Readline
+alias racket='racket -il readline'
+
 #
 # OS Specific Aliases
 #
