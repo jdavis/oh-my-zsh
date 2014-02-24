@@ -28,48 +28,48 @@ alias gP='git push'
 
 # OS X Aliases
 if [[ $CURRENT_OS == 'OS X' ]]; then
-	# Hidden files
-	alias showhiddenfiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
-	alias hidehiddenfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
+    # Hidden files
+    alias showhiddenfiles='defaults write com.apple.finder AppleShowAllFiles TRUE && killall Finder'
+    alias hidehiddenfiles='defaults write com.apple.finder AppleShowAllFiles FALSE && killall Finder'
 
-	# Custom search script
-	alias ebook='locates ~/EBooks '
+    # Custom search script
+    alias ebook='locates ~/EBooks '
 
-	# Journal Alias
-	alias journal='vim ~/Documents/Journal/`date "+%Y"`/`date "+%B"`/`date "+%d-%A"`.txt'
+    # Journal Alias
+    alias journal='vim ~/Documents/Journal/`date "+%Y"`/`date "+%B"`/`date "+%d-%A"`.txt'
 
-	#
-	# Application aliases
-	#
-	alias vine='open -a Vine\ Server'
-	alias ss='/System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine &'
+    #
+    # Application aliases
+    #
+    alias vine='open -a Vine\ Server'
+    alias ss='/System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app/Contents/MacOS/ScreenSaverEngine &'
 
-	# Open from command line
-	alias finder='open -a Finder '
+    # Open from command line
+    alias finder='open -a Finder '
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     #
     # Global Linux
     #
 
     # Misc Aliases
-	alias ls='ls --color=auto'
+    alias ls='ls --color=auto'
 
-	# Extensions
-	alias -s avi=vlc
-	alias -s html=$BROWSER
-	alias -s pdf=epdfview
-	alias -s txt=$EDITOR
-	alias -s text=$EDITOR
+    # Extensions
+    alias -s avi=vlc
+    alias -s html=$BROWSER
+    alias -s pdf=epdfview
+    alias -s txt=$EDITOR
+    alias -s text=$EDITOR
 
-	# Images
-	alias -s png=feh
-	alias -s jpeg=feh
-	alias -s jpg=feh
-	alias -s gif=feh
+    # Images
+    alias -s png=feh
+    alias -s jpeg=feh
+    alias -s jpg=feh
+    alias -s gif=feh
 
-	# Source Extensions
-	alias -s hs=$EDITOR
-	alias -s c=$EDITOR
+    # Source Extensions
+    alias -s hs=$EDITOR
+    alias -s c=$EDITOR
 
     #
     # User Specific Aliases
