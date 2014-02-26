@@ -35,6 +35,12 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     export PATH=$PATH:~/.cabal/bin
     export PATH=$PATH:~/bin/
 
+    # CentOS Paths
+    if [[ $DISTRO == 'CentOS' ]]; then
+        # Add LaTeX to path
+        export PATH=$PATH:/usr/local/texlive/2013/bin/x86_64-linux
+    fi
+
     #
     # User Specific Aliases
     #
