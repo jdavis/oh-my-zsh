@@ -7,7 +7,17 @@ alias ll='ls -l'
 alias la='ls -a'
 alias lla='ls -al'
 
+# Some cd aliases
 alias back='cd -'
+
+# ......
+alias ..='cd ../'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias .....='cd ../../../../'
+alias ......='cd ../../../../../'
+alias .......='cd ../../../../../../'
+alias ........='cd ../../../../../../../'
 
 # ZSH Global Aliases
 alias -g L=' | less'
