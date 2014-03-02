@@ -5,6 +5,7 @@
 # Builtin aliases
 alias ll='ls -l'
 alias la='ls -a'
+alias lla='ls -al'
 
 alias back='cd -'
 
