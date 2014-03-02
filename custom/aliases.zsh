@@ -68,6 +68,9 @@ elif [[ $CURRENT_OS == 'Linux' ]]; then
     # Misc Aliases
     alias ls='ls --color=auto'
 
+    # MVim == GVim on Linux
+    alias mvim='gvim'
+
     # Extensions
     alias -s avi=vlc
     alias -s html=$BROWSER
