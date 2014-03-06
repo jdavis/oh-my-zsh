@@ -4,3 +4,6 @@
 [submodule "custom/zsh-fuzzy-match"]
 	path = custom/zsh-fuzzy-match
 	url = https://github.com/tarruda/zsh-fuzzy-match.git
+[submodule "custom/plugins/zsh-syntax-highlighting"]
+	path = custom/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
