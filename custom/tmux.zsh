@@ -4,13 +4,16 @@
 #
 # To add an alias, just add a line to the $cmds array below. The format is as
 # follows:
-#   [n num of args]:[alias]
+#   [n num of args, defaults to 1]:[alias]
 #       arg1
 #       arg2
 #       ...
 #       argn
 # From then on, you can run `t a dev` which will turn into something like `tmux
 # attach-session -t dev` which saves a lot of typing.
+#
+# For the list of all aliases, just run `t help` or anything like that (such
+# as -h, --h, --help).
 #
 #  Author: Josh Davis
 # Contact: josh@joshldavis.com
