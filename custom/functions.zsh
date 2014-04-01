@@ -9,7 +9,8 @@ function cd() {
 
 #Get IP
 function ip-addr() {
-    curl -s http://checkip.dyndns.org | sed 's/[a-zA-Z<>/ :]//g';
+    wget -qO- http://ipecho.net/plain
+    echo
 }
 
 # Display a random Slashdot, HTTP header, Futurama quote
