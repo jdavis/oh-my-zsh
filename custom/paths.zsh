@@ -11,8 +11,20 @@ export PATH=$PATH:~/bin
 
 # OS X Aliases
 if [[ $CURRENT_OS == 'OS X' ]]; then
+    #
+    # Prefixed Paths
+    #
+
     # Prefix /usr/local/bin for brew
     export PATH=/usr/local/bin:$PATH
+
+    # Rbenv
+    export PATH=~/.rbenv/shims:$PATH
+
+    #
+    # Normal Paths
+    #
+
     # MIT-Scheme
     export MITSCHEME_LIBRARY_PATH=/usr/local/lib/mit-scheme-c/
     # Nmap
