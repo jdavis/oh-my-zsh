@@ -49,6 +49,8 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
     # Custom search script
     alias ebook='locates ~/EBooks '
 
+    alias rebuild-open-with='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -seed /Applications{,/Utilities}'
+
     # Journal Alias
     alias journal='vim ~/Documents/Journal/`date "+%Y"`/`date "+%B"`/`date "+%d-%A"`.txt'
 
