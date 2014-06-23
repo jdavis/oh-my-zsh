@@ -36,6 +36,7 @@ alias gP='git push'
 # Racket: load Readline
 alias racketrl='racket -il readline'
 
+
 #
 # OS Specific Aliases
 #
@@ -53,6 +54,10 @@ if [[ $CURRENT_OS == 'OS X' ]]; then
 
     # Journal Alias
     alias journal='vim ~/Documents/Journal/`date "+%Y"`/`date "+%B"`/`date "+%d-%A"`.txt'
+
+    # EBooks
+    alias tex4ebook='texlua ~/Library/texmf/tex/latex/tex4ebook/tex4ebook.lua'
+
 
     #
     # Application aliases
